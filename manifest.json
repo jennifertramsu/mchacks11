@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name":"Truthsayer",
+    "description": "Show me the truth.",
+    "version":"1.0",
+    "action":{
+        "default_popup":"hello.html",
+        "default_icon":"temp_logo.png"
+    }
+}
