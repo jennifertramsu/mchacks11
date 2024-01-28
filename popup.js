@@ -1,8 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const button = document.getElementById("change-color-button");
-    button.addEventListener("click", () => {
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, { type: "change-color" });
+alert("HELLO")
+
+async function getCurrentTab() {
+  let queryOptions = { active: true, lastFocusedWindow: true };
+  // `tab` will either be a `tabs.Tab` instance or `undefined`.
+  let [tab] = await chrome.tabs.query(queryOptions);
+  return tab;
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('Truthify-button').addEventListener('click', function() {
+      chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+        chrome.scripting.executeScript(
+          {
+          target: {tabId: tabs[0].id},
+          files: ['edit_text.js']
+          }
+        ); 
       });
-    });
   });
+});
+
