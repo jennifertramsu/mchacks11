@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+	<head> 
+		<meta charset = "UTF-8">
+		<title> My First Webpage </title> 
+	</head>
+</html>
+<body>
+	<h1> Hello World! </h1> 
+    <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*">
+</body>
+<script>
+    imgs = document.getElementsByTagName("img");
+    replacement="https://miro.medium.com/v2/resize:fit:591/1*3OEaIFUdjcCzFWxAtl2ZVw.jpeg"
+
+    //replace all the attributes of img with replacement url
+    for (const i of imgs){
+        i.src=replacement;
+    }
+</script>
+</html>

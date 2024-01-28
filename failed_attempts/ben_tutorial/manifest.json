@@ -1,0 +1,25 @@
+{
+    "manifest_version":3,
+    "name": "Help",
+    "version": "1.0.0",
+    "permissions":[
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "content_scripts":[
+        {
+            "all_frames":true,
+            "js":["help.js"],
+            "matches":[
+                "<all_urls>"]
+        }
+    ],
+    "action":{
+        "default_popup":"help.html"
+    }
+    
+
+    
+}

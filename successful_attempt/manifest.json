@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name":"Truthsayer",
+    "description": "Show me the truth.",
+    "version":"2.0",
+    "permissions":["activeTab"],
+    "action":{
+        "default_icon":"/assets/temp_logo.png"
+    },
+    
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "all_frames": true,
+            "js": ["rectify.js"],
+            "run_at": "document_end"
+        }
+    ]
+    
+    
+}
