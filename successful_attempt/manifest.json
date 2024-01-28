@@ -1,21 +1,35 @@
 {
     "manifest_version": 3,
-    "name":"Truthsayer",
+    "name": "Truthsayer",
     "description": "Show me the truth.",
-    "version":"2.0",
-    "permissions":["activeTab"],
-    "action":{
-        "default_icon":"/assets/temp_logo.png"
+    "version": "2.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+        "default_icon": "/assets/temp_logo.png"
     },
-    
     "content_scripts": [
         {
-            "matches": ["*://*/*"],
+            "matches": [
+                "*://*/*"
+            ],
             "all_frames": true,
-            "js": ["rectify.js"],
+            "js": [
+                "rectify.js"
+            ],
             "run_at": "document_end"
         }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "images/flat_earth/*.jpg",
+                "images/mechanical_birds/*.jpg"
+            ],
+            "matches": [
+                "*://*/*"
+            ]
+        }
     ]
-    
-    
 }
