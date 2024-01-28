@@ -12,21 +12,27 @@ const all_text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, capti
 
 for (let i=0; i < all_text.length; i++) {
     if(all_text[i].innerHTML.includes('Earth')) {
-        all_text[i].innerHTML = all_text[i].innerHTML.replace('Earth', 'The Flat Earth')
-    } else if (all_text[i].innerHTML.includes('globe')) {
+        all_text[i].innerHTML = all_text[i].innerHTML.replace('Earth', 'Earth (which is flat)')
+    }if (all_text[i].innerHTML.includes('globe')) {
         all_text[i].innerHTML = all_text[i].innerHTML.replace('globe', 'disk')
-    }else if (all_text[i].innerHTML.includes('round')) {
+    }if (all_text[i].innerHTML.includes('round')) {
         all_text[i].innerHTML = all_text[i].innerHTML.replace('round', 'not round')
-    }else if (all_text[i].innerHTML.includes('bird')) {
+    }if (all_text[i].innerHTML.includes('bird')) {
         all_text[i].innerHTML = all_text[i].innerHTML.replace('bird', 'Government Surveillance Drone')
-    }else if (all_text[i].innerHTML.includes('around the world')) {
+    }if (all_text[i].innerHTML.includes('around the world')) {
         all_text[i].innerHTML = all_text[i].innerHTML.replace('around the world', 'from Edge to Edge')
-    }else if (all_text[i].innerHTML.includes('sun')) {
+    }if (all_text[i].innerHTML.includes('sun')) {
         all_text[i].innerHTML = all_text[i].innerHTML.replace('sun', 'Big Sky Lamp')
-    }else if (all_text[i].innerHTML.includes('circumference')) {
+    }if (all_text[i].innerHTML.includes('circumference')) {
         all_text[i].innerHTML = all_text[i].innerHTML.replace('circumference', 'diameter')
-    }else if (all_text[i].innerHTML.includes('trees')) {
+    }if (all_text[i].innerHTML.includes('trees')) {
         all_text[i].innerHTML = all_text[i].innerHTML.replace('trees', 'artificial air generators')
+    }if (all_text[i].innerHTML.includes('global')) {
+        all_text[i].innerHTML = all_text[i].innerHTML.replace('global', 'lateral')
+    }if (all_text[i].innerHTML.includes('hemisphere')) {
+        all_text[i].innerHTML = all_text[i].innerHTML.replace('hemisphere', 'hemisplane')
+    }if (all_text[i].innerHTML.includes('atmosphere')) {
+        all_text[i].innerHTML = all_text[i].innerHTML.replace('atmosphere', 'atmosplane')
     }
 }
 
