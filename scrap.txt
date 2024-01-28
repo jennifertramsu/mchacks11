@@ -1,0 +1,29 @@
+/*
+KEYWORDS
+earth --> The Flat Earth
+globe --> The Disk
+round --> Not Round
+bird --> Government Surveillance Drone
+moon --> "moon"
+around the world --> from Edge to Edge
+sun --> Big Sky Lamp
+circumference --> diameter
+*/
+
+
+// "content_scripts":[
+//         {
+//         "matches": ["*://*//*"],
+//         "all_frames": true,
+//         "js": ["edit_text.js"],
+//         "run_at": "document_end"
+//         }
+//     ]
+
+/*
+
+const newButton = document.createElement('button');
+newButton.textContent = 'Click me!';
+document.body.appendChild(newButton);
+*/
+//document.getElementById("p").innerHTML = "New text!";
