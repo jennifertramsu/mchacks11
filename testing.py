@@ -1,7 +1,7 @@
 import requests
 
 API_BASE_URL = "https://api.cloudflare.com/client/v4/accounts/02c80627fc67f8dd0b82b024c5c96601/ai/run/"
-headers = {"Authorization": "Bearer 8tzM1jW2x3PcYZdR2SRLUMIxizqyrG0Vz5UsXq1h"}
+headers = {"Authorization": BEARER TOKEN }
 
 def run(model, inputs):
     input = { "messages": inputs }
