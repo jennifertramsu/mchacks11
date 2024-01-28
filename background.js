@@ -1,10 +1,15 @@
+chrome.browserAction.onClicked.addListener(function(activeTab) {
+  chrome.tabs.executeScript(null, {file: "edit_text.js"});
+});
+
+
 //set initial state as OFF
 chrome.runtime.onInstalled.addListener(() => {
     chrome.action.setBadgeText({
       text: 'OFF'
     });
   });
-  
+
   const extensions = 'https://developer.chrome.com/docs/extensions';
   const webstore = 'https://developer.chrome.com/docs/webstore';
   
@@ -24,8 +29,8 @@ chrome.runtime.onInstalled.addListener(() => {
   
       if (nextState === 'ON') {
         // Insert the CSS file when the user turns the extension on
-        await chrome.scripting.insertCSS({
-          files: ['focus-mode.css'],
+        await chrome.scripting.executeScript({
+          files: ['edit_text.js'],
           target: { tabId: tab.id }
         });
       } else if (nextState === 'OFF') {
@@ -37,3 +42,5 @@ chrome.runtime.onInstalled.addListener(() => {
       }
     }
   });
+
+  

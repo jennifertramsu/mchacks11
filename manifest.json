@@ -4,8 +4,15 @@
     "description": "Show me the truth.",
     "version":"1.0",
     "permissions":["activeTab"],
-    "action":{
-        "default_icon":"assets/temp_logo.png",  
-        "default_popup":"hello.html"
-    }
+    
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "all_frames": true,
+            "js": ["edit_text.js"],
+            "run_at": "document_end"
+        }
+    ]
+    
+    
 }
