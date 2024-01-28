@@ -1,5 +1,5 @@
 imgs = document.getElementsByTagName("img");
-
+constbo
 replacement="https://miro.medium.com/v2/resize:fit:591/1*3OEaIFUdjcCzFWxAtl2ZVw.jpeg"
 
 //replace all the attributes of img with replacement url
