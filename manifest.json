@@ -3,9 +3,16 @@
     "name":"Truthsayer",
     "description": "Show me the truth.",
     "version":"1.0",
-    "permissions":["activeTab"],
-    "action":{
-        "default_icon":"assets/temp_logo.png",  
-        "default_popup":"hello.html"
+    "permissions":["activeTab", "scripting"],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "action": {
+        "default_title": "Action Button",
+        "default_popup": "hello.html"
+
+        
     }
+    
+    
 }
