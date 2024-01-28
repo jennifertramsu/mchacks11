@@ -1,11 +1,19 @@
-imgs = document.getElementsByTagName("img");
+//imgs = document.getElementsByTagName("img");
+imgs = document.querySelectorAll("img", "d2l-organization-image");
 
-replacement="https://miro.medium.com/v2/resize:fit:591/1*3OEaIFUdjcCzFWxAtl2ZVw.jpeg"
+// replacement="https://miro.medium.com/v2/resize:fit:591/1*3OEaIFUdjcCzFWxAtl2ZVw.jpeg"
 
 //replace all the attributes of img with replacement url
 for (const i of imgs){
-    i.src=replacement;
-    i.srcset=replacement;
+    // Randomly select a number between 1 and 99
+    const random = Math.floor(Math.random() * 99) + 1;
+    
+    // Retrieve image from the local images folder
+    replacement = chrome.runtime.getURL("images/mechanical_birds/" + random + ".jpg");
+
+    // Replace the image
+    i.src = replacement;
+    i.srcset = replacement;
 }
 
 const all_text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, a')
