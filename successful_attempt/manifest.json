@@ -7,7 +7,9 @@
         "activeTab"
     ],
     "action": {
-        "default_icon": "/assets/temp_logo.png"
+        "default_icon": "/assets/temp_logo.png",
+        "default_popup": "popup.html"
+
     },
     "content_scripts": [
         {
