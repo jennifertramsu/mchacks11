@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         chrome.scripting.executeScript(
           {
           target: {tabId: tabs[0].id},
-          files: ['edit_text.js']
+          files: ['rectify.js']
           }
         ); 
       });
